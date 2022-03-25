@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<array>
+<materia>
+    <aula>
+        <titulo>João 🤮</titulo>
+        <texto>98875-9856</texto>
+    </aula>
+    <aula>
+        <titulo>Matheus 🀄</titulo>
+        <texto>12345-9876</texto>
+     </aula>
+     <aula>
+        <titulo>Caio 🧦</titulo>
+        <texto>54321-6798</texto>
+     </aula>
+     <aula>
+        <titulo>Giulia 🌶️</titulo>
+        <texto>76543-0124</texto>
+     </aula>
+</materia>
+</array>
