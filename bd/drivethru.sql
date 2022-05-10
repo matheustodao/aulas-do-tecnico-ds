@@ -57,3 +57,16 @@ DELETE FROM pedidos WHERE id = 1;
 DELETE FROM pedidos WHERE id = 2;
 DELETE FROM pedidos WHERE id = 8;
 
+-- SELECT na tabela de pedidos
+SELECT * FROM pedidos;
+SELECT prato_id FROM pedidos;
+SELECT prato_id, codigo FROM pedidos;
+SELECT codigo FROM pedidos where quantidade = 2;
+SELECT * FROM pedidos where quantidade = 6;
+
+-- SELECT na tabela de pratos
+SELECT * FROM pratos where valor = 10;
+SELECT * FROM pratos;
+SELECT nome, valor FROM pratos;
+SELECT descricao FROM pratos;
+SELECT nome FROM pratos;
