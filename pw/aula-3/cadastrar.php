@@ -23,4 +23,6 @@
     $sql->bindValue('licensePlate', $licensePlate);
     $sql->bindValue('chassis', $chassis);
     $sql->execute();
+
+    header('location: ./lista.php');
 ?>

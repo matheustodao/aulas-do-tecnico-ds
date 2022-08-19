@@ -53,5 +53,10 @@
 
         <button type="submit">Cadastrar</button>
     </form>
+
+    <div>
+        <h4>Ou</h4>
+        <a href="./lista.php">Ver os carros cadastrados</a>
+    </div>
 </body>
 </html>
