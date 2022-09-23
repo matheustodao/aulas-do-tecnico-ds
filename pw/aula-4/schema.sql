@@ -11,7 +11,7 @@ CREATE TABLE employee (
     last_name VARCHAR(255),
     job VARCHAR(255),
     cpf VARCHAR(20),
-    salary FLOAT,
+    salary VARCHAR(255),
     shift VARCHAR(50),
     image BLOB,
     description_of_office VARCHAR(255),
