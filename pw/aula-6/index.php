@@ -74,7 +74,8 @@
     if (isset($_POST['busca'])) {
         $searchTerm = $_POST['busca'];
         $searchByRole = "OR role LIKE '%" . $searchTerm . "%'";
-        $sql = "SELECT * FROM hero WHERE name LIKE '%" . $searchTerm . "%'" . $searchByRole;
+        $searchByStory = "OR story LIKE '%" . $searchTerm . "%'";
+        $sql = "SELECT * FROM hero WHERE name LIKE '%" . $searchTerm . "%'" . $searchByRole . $searchByStory;
     }
     $pdo = Banco::conectar();
     $sql = $pdo->prepare($sql);
@@ -91,6 +92,7 @@
         echo '<tr>';
             echo '<td>' . $heroList[$index]['name'] . '</td>';
             echo '<td>' . $heroList[$index]['role'] . '</td>';
+            echo '<td>' . $heroList[$index]['story'] . '</td>';
             echo '<td> <img src="' . $heroList[$index]['image'] . '" alt="foto de perfil" width="250px" height="250px" /> </td>';
         echo '</tr>';
     }
