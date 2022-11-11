@@ -30,6 +30,10 @@
             aspect-ratio: 1;
         }
 
+        td .story {
+            max-width: 250px;
+        }
+
         #form {
             display: flex;
             align-items: center;
@@ -86,13 +90,14 @@
         echo '<tr>';
             echo '<th>Nome</th>';
             echo '<th>Categoria</th>';
+            echo '<th>Historia</th>';
             echo '<th>Foto</th>';
         echo '</tr>';
     for ($index = 0; $index < COUNT($heroList); $index++) {
         echo '<tr>';
             echo '<td>' . $heroList[$index]['name'] . '</td>';
             echo '<td>' . $heroList[$index]['role'] . '</td>';
-            echo '<td>' . $heroList[$index]['story'] . '</td>';
+            echo '<td className="story">' . $heroList[$index]['story'] . '</td>';
             echo '<td> <img src="' . $heroList[$index]['image'] . '" alt="foto de perfil" width="250px" height="250px" /> </td>';
         echo '</tr>';
     }
