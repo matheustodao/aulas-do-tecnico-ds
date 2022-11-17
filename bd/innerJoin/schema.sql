@@ -2,7 +2,7 @@ CREATE DATABASE loja;
 
 USE loja;
 
-CREATE TABLE cliente (
+CREATE TABLE clientes (
   id INT AUTO INCREMENT PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
   endereco VARCHAR(255) NOT NULL,
@@ -11,12 +11,12 @@ CREATE TABLE cliente (
   cpf VARCHAR(18) NOT NULL
 )
 
-CREATE TABLE categoria (
+CREATE TABLE categorias (
   id INT AUTO INCREMENT PRIMARY KEY,
   name VARCHAR(255) NOT NULL
 )
 
-CREATE TABLE produto (
+CREATE TABLE produtos (
   id INT AUTO INCREMENT PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
   quantidade INT NOT NULL,
@@ -26,10 +26,12 @@ CREATE TABLE produto (
   FOREIGN KEY produto(categoria_id) REFERENCES categoria(id)
 )
 
-CREATE TABLE venda (
+CREATE TABLE vendas (
   id INT AUTO INCREMENT PRIMARY KEY,
   produto_id INT,
-  cliente_id INT
-  FOREIGN KEY venda(produto_id) REFERENCES produto(id),
-  FOREIGN KEY venda(cliente_id) REFERENCES cliente(id)
+  FOREIGN KEY venda(produto_id) REFERENCES produto(id)
 )
+
+SELECT vendas.*, produtos.*
+FROM vendas
+INNER JOIN produtos ON vendas.produto_id = produtos.id
