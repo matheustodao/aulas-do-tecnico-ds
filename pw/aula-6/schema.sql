@@ -1,23 +1,16 @@
-CREATE DATABASE employees;
+CREATE DATABASE heros;
 
-USE employees;
+USE heros;
 
-CREATE TABLE employee (
+CREATE TABLE hero (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255),
-    email VARCHAR(255),
-    phone VARCHAR(255),
-    gender VARCHAR(255),
-    last_name VARCHAR(255),
-    job VARCHAR(255),
-    cpf VARCHAR(20),
-    salary VARCHAR(255),
-    shift VARCHAR(50),
+    story TEXT,
     image BLOB,
-    description_of_office VARCHAR(255),
-    status VARCHAR(255)
+    role VARCHAR(255)
 );
 
-INSERT INTO `employee` (`id`, `name`, `email`, `phone`, `gender`, `last_name`, `job`, `cpf`, `salary`, `shift`, `image`, `description_of_office`, `status`) VALUES (1, 'Dado', 'dado@mail.com', '19964126189', 'male', 'Ter', 'vaga', '11234565468485', '1800', 'h\\bjdsbuy', NULL, 'nascjnashjkcbnhjasbcjul', 'license');
-INSERT INTO `employee` (`id`, `name`, `email`, `phone`, `gender`, `last_name`, `job`, `cpf`, `salary`, `shift`, `image`, `description_of_office`, `status`) VALUES (2, 'Caio', 'caio@mail.com', '123456', 'male', 'Tres', 'Engenheiro', '987654', '5000', 'h\\bjdsbuy', NULL, 'nascjnashjkcbnhjasbcjul', 'ferias');
-INSERT INTO `employee` (`id`, `name`, `email`, `phone`, `gender`, `last_name`, `job`, `cpf`, `salary`, `shift`, `image`, `description_of_office`, `status`) VALUES (3, 'Heloisa', 'heloisa@mail.com', '885522', 'mulher', 'Duo', 'Dançarina', '456', '5000', 'h\\bjdsbuy', NULL, 'nascjnashjkcbnhjasbcjul', 'ativo');
+INSERT INTO hero (name, role, story) VALUES('Ahri', 'Mage', 'Innately connected to the latent power of Runeterra, Ahri is a vastaya who can reshape magic into orbs of raw energy. She revels in toying with her prey by manipulating their emotions before devouring their life essence. Despite her predatory nature, Ahri retains a sense of empathy as she receives flashes of memory from each soul she consumes.');
+INSERT INTO hero (name, role, story) VALUES('Bard', 'Support', 'A traveler from beyond the stars, Bard is an agent of serendipity who fights to maintain a balance where life can endure the indifference of chaos. Many Runeterrans sing songs that ponder his extraordinary nature, yet they all agree that the cosmic vagabond is drawn to artifacts of great magical power. Surrounded by a jubilant choir of helpful spirit meeps, it is impossible to mistake his actions as malevolent, as Bard always serves the greater good... in his own odd way.');
+INSERT INTO hero (name, role, story) VALUES('Galio', 'Tank', 'Outside the gleaming city of Demacia, the stone colossus Galio keeps vigilant watch. Built as a bulwark against enemy mages, he often stands motionless for decades until the presence of powerful magic stirs him to life. Once activated, Galio makes the most of his time, savoring the thrill of a fight and the rare honor of defending his countrymen. But his triumphs are always bittersweet, for the magic he destroys is also his source of reanimation, and each victory leaves him dormant once again.');
+INSERT INTO hero (name, role, story) VALUES('Garen', 'Fighter', 'A proud and noble warrior, Garen fights as one of the Dauntless Vanguard. He is popular among his fellows, and respected well enough by his enemies—not least as a scion of the prestigious Crownguard family, entrusted with defending Demacia and its ideals. Clad in magic-resistant armor and bearing a mighty broadsword, Garen stands ready to confront mages and sorcerers on the field of battle, in a veritable whirlwind of righteous steel.');
